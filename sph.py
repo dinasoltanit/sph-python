@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 from scipy.special import gamma
 
 """
-Create Your Own Smoothed-Particle-Hydrodynamics Simulation (With Python)
-Philip Mocz (2020) Princeton Univeristy, @PMocz
+This code is forked from Philip Mocz at Princeton Univeristy, @PMocz,
+to study the Smoothed-Particle-Hydrodynamics Simulation (With Python)
 
 Simulate the structure of a star with SPH
 """
@@ -21,7 +21,7 @@ def W( x, y, z, h ):
 	
 	r = np.sqrt(x**2 + y**2 + z**2)
 	
-	w = (1.0 / (h*np.sqrt(np.pi)))**3 * np.exp( -r**2 / h**2)
+	w = (1.0 / (h*np.sqrt(np.pi)))**3 * np.exp( -r**2 / h**2) #smoothening functions?
 	
 	return w
 	
